@@ -1,4 +1,4 @@
-count = 0;
+let = count = 0;
 function cc(card) {
   switch (card) {
     case 2:
@@ -29,4 +29,3 @@ cc(10);
 cc("K");
 cc("A");
 console.log(cc(4));
-// não entendi como o resulturado da -2 aqui.
