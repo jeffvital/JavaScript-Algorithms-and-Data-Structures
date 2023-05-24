@@ -23,11 +23,22 @@ function updateRecords(records, id, prop, value) {
   if (value === "") {
     delete records[id][prop];
   } else if (prop !== "tracks" && value !== "") {
-    records[id][props] = value;
+    records[id][prop] = value;
   } else if (prop === "tracks" && value !== "") {
-    // In progress...
+    if (records[id].hasOwnProperty("tracks")) {
+      records[id]["tracks"] = [];
+      records[id]["tracks"].push(value);
+    }
   }
   return records;
 }
 
-updateRecords(recordCollection, 5439, "artist", "ABBA");
+var result;
+
+result = updateRecords(recordCollection, 5439, "artist", "ABBA");
+
+result = updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me");
+
+result = updateRecords(recordCollection, 2568, "tracks", "Free");
+
+// Preciso adicionar um array caso não tenha
