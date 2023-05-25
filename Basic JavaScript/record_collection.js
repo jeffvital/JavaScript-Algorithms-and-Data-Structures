@@ -33,7 +33,11 @@ function updateRecords(records, id, prop, value) {
   return records;
 }
 
+// 
+
 let result;
+// I preferred to create a single variable
+// to display in the console at once.
 
 result = updateRecords(recordCollection, 5439, "artist", "ABBA");
 
