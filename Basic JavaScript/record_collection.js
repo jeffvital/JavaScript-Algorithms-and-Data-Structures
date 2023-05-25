@@ -19,37 +19,19 @@ const recordCollection = {
   },
 };
 
-// AINDA NÃO ENTENDI POR QUE TENHO QUE USAR NEGAÇÃO
-// PARA A CONDICIONAL FUNCIONAR.
 function updateRecords(records, id, prop, value) {
   if (value === "") {
     delete records[id][prop];
-  } else if (!prop !== "tracks" && value !== "") {
+  } else if (prop !== "tracks" && value !== "") {
     records[id][prop] = value;
-  } else if (!prop !== "tracks" && value !== "") {
-    if (records[id].hasOwnProperty("tracks")) {
+  } else if (prop === "tracks" && value !== "") {
+    if (!records[id].hasOwnProperty("tracks")) {
       records[id]["tracks"] = [];
-      records[id]["tracks"].push(value);
     }
+    records[id]["tracks"].push(value);
   }
   return records;
 }
-
-// NOVA ABORDAGEM DO PROBLEMA QUE FUNCIONA
-
-// function updateRecords(records, id, prop, value) {
-//   if (value === "") {
-//     delete records[id][prop];
-//   } else if (prop !== "tracks" && value !== "") {
-//     records[id][prop] = value;
-//   } else if (prop === "tracks" && value !== "") {
-//     if (!records[id].hasOwnProperty("tracks")) {
-//       records[id]["tracks"] = [];
-//     }
-//     records[id]["tracks"].push(value);
-//   }
-//   return records;
-// }
 
 let result;
 
@@ -60,4 +42,3 @@ result = updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me");
 result = updateRecords(recordCollection, 2468, "tracks", "Free");
 
 console.log(result);
-// Preciso adicionar um array caso não tenha
