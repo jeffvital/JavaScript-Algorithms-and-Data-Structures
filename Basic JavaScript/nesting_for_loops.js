@@ -8,6 +8,8 @@ function multiplyAll(arr) {
   return product;
 }
 
+// Addin up all subarrays
+
 result = multiplyAll([
   [1, 2],
   [3, 4],
