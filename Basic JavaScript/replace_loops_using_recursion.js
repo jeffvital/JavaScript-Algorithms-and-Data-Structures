@@ -1,10 +1,22 @@
-function fatorial(n) {
+// function fatorial(n) {
+//   if (n === 0) {
+//     return 1;
+//   } else {
+//     return n * fatorial(n - 1);
+//   }
+// }
+
+// // Exemplo de uso:
+// console.log(fatorial(5));
+
+function sum(arr, n) {
+  // Caso base
   if (n === 0) {
-    return 2; // Caso base: fatorial de 0 é 1
+    return 0;
   } else {
-    return n * fatorial(n - 1);
+    // Chamada recursiva e soma do elemento atual
+    return sum(arr, n - 1) + arr[n - 1];
   }
 }
 
-// Exemplo de uso:
-console.log(fatorial(3));
+console.log(sum([2, 3, 4], 2));
