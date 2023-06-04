@@ -27,13 +27,16 @@ const contacts = [
 ];
 
 function lookUpProfile(name, prop) {
-  if (name === contacts[firstName] && prop === contacts[lastName]) {
-    return prop;
-  } else if (name !== contacts[firstName]) {
-    return `No such contact`;
-  } else if (prop !== contacts[lastName]) {
-    return `No such property`;
+  for (let i = 0; i < contacts.length; i++) {
+    if (name === contacts[i].firstName) {
+      if (contacts[i].hasOwnProperty(prop)) {
+        return contacts[i][prop];
+      } else {
+        return `No such property`;
+      }
+    }
   }
+  return `No such contact`;
 }
 
 let result = lookUpProfile("Akira", "likes");
