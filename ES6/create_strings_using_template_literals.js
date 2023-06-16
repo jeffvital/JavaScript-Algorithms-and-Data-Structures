@@ -5,11 +5,15 @@ const result = {
 };
 
 function makeList(arr) {
-  for (let prop in arr) {
-    console.log(`It works" ${arr[prop]}`);
+  const failureItems = [];
+  const a = "texto";
+  const b = "texto";
+  for (let i = 0; i < result.failure.length; i++) {
+    failureItems.push(`${a + arr.failure[i] + b}`);
   }
+  return failureItems;
 }
 
-makeList(result);
+console.log(makeList(result));
 
-// O for...in não me parece ser a solução adequada.
+// almost getting there!
