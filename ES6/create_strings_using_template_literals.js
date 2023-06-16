@@ -5,15 +5,15 @@ const result = {
 };
 
 function makeList(arr) {
+  "use strict";
   const failureItems = [];
-  const a = "texto";
-  const b = "texto";
-  for (let i = 0; i < result.failure.length; i++) {
-    failureItems.push(`${a + arr.failure[i] + b}`);
+  for (let i = 0; i < arr.length; i++) {
+    failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
   }
+
   return failureItems;
 }
 
-console.log(makeList(result));
+const failuresList = makeList(result.failure);
 
-// almost getting there!
+console.log(failuresList);
