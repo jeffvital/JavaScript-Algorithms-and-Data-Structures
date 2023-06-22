@@ -4,7 +4,7 @@ class Thermostat {
   }
   // getter
   get temperature() {
-    return this._fahrenheit.toFixed(2);
+    return this._fahrenheit;
   }
   // setter
   set temperature(updatedFahrenheit) {
@@ -18,5 +18,3 @@ thermos.temperature = 26;
 temp = thermos.temperature;
 
 console.log(temp);
-
-// solving the fcc debugger
