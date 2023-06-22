@@ -14,8 +14,9 @@ class Thermostat {
 
 const thermos = new Thermostat(76); // Setting in Fahrenheit scale
 let temp = thermos.temperature;
+thermos.temperature = 26;
+temp = thermos.temperature;
 
-// thermos.temperature = 26;
-// temp = thermos.
+console.log(temp);
 
-// in progress in the last line
+// solving the fcc debugger
