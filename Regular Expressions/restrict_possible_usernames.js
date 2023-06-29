@@ -1,7 +1,5 @@
-let username = "JACK";
-let userCheck = /^[a-zA-Z]{2,}[a-zA-Z\d]*\d*$/g;
-let result = username.match(userCheck);
+let username = "JackOfAllTrades";
+const userCheck = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/gi;
+let result = userCheck.test(username);
 
 console.log(result);
-
-// making progress almost getting there!
