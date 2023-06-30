@@ -1,8 +1,5 @@
 let ohStr = "Ohhh no";
-let ohRegex = /ohh{2,6}\sno/gi;
-let result = ohRegex.test(ohStr);
+let ohRegex = /oh{3,6}\sno/gi;
+let result = ohStr.match(ohRegex);
 
 console.log(result);
-
-
-// code in progress
