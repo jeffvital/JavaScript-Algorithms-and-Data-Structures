@@ -34,4 +34,4 @@ while (k < 5) {
 
 // Nesse exemplo, a variável l é reinicializada corretamente em cada ciclo e seu valor é incrementado. Dessa forma, o valor de l é 1 em cada iteração do loop.
 
-// in progress... testando
+// in progress... removido
